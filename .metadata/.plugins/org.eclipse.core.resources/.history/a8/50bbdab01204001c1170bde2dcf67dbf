@@ -1,0 +1,23 @@
+package arrays;
+import java.util.*;
+
+public class array{
+	public static int fibo(int n)
+	{
+		int series=0;
+		if(n==0 || n==1) { 
+			System.out.print(n+" ");
+			return n;     
+			}                      
+		int a=fibo(n-1);
+		int b= fibo(n-2);
+		series = a+b;
+        System.out.print(series);
+        return 0;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		fibo(n);
+	}	
+}

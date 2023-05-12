@@ -1,0 +1,39 @@
+package tests;
+import java.util.*;
+
+public class shams {
+	/*public static void rec(String que,int ci,String ans,int l)
+	{
+		if(ci==l){
+			System.out.println(ans+que);
+			return;}
+		if(que.charAt(ci)=='A' && que.charAt(ci+1)=='B' || que.charAt(ci)=='B' && que.charAt(ci+1)=='A')
+		{
+			que=que.substring(ci+2);
+			rec(que,ci+2,ans,l);
+		}
+		if(que.charAt(ci)=='C' && que.charAt(ci+1)=='D' || que.charAt(ci)=='D' && que.charAt(ci+1)=='C') {
+			que=que.substring(ci+2);
+			rec(que,ci+2,ans,l);
+		}
+		rec(que,ci+1,ans,l);
+	}*/
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		String que = sc.nextLine();
+		String ans="";
+		int ci=0,l=que.length();
+		for(ci=0;ci<que.length();ci++)
+		{
+			if(que.charAt(ci)=='A' && que.charAt(ci+1)=='B' || que.charAt(ci)=='B' && que.charAt(ci+1)=='A') {
+			que = que.substring(0,ci)+que.substring(ci+2);
+			}
+			if(que.charAt(ci)=='C' && que.charAt(ci+1)=='D' || que.charAt(ci)=='D' && que.charAt(ci+1)=='C') {
+				que = que.substring(0,ci)+que.substring(ci+2);
+			}
+		}
+		System.out.println(que);
+	}
+
+}

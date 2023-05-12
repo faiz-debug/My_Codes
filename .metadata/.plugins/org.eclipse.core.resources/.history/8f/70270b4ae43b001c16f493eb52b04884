@@ -1,0 +1,37 @@
+package tests;
+import java.util.*;
+//NOKIA KEYPAD.
+public class test {
+	private static String mapping(char inp) {
+		// TODO Auto-generated method stub
+		char cc = inp;
+		if(cc=='2')
+			return "abc";
+		else if(cc=='3')
+			return "def";
+		else if(cc=='4')
+			return "ghi";
+		else if(cc=='5')
+			return "jkl";
+		else if(cc=='6')
+			return "mno";
+		else if(cc=='7')
+			return "pqrs";
+		else if(cc=='8')
+			return "tuv";
+		else if(cc=='9')
+			return "wxyz";
+		else
+		return "";
+	}
+	public static void result(String inp,String out) {
+		char val = inp.charAt(0);
+		System.out.println(mapping(val));
+	}
+	public static void main(String[] args) {
+		result("23","");
+        }
+
+	}
+	
+

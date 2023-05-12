@@ -1,0 +1,18 @@
+package dataStructures;
+
+public class DataStructure {
+	//First we create a class for linkedlist
+	public class node{ // then a class for node i.e a block of linkedlist, that has 1 data and 1 node 
+		int val;
+		node next;
+	}
+	node head;  // as we need to have a pointer that point for the 1st element hence we store the address of 1st element in head.
+	public void Display() {
+		node i = head;   // i=0;
+		while(i!=null) {  // i!= arr.length;
+			System.out.println(i.val);   // print arr[i];
+			i=i.next;   i=i+1;
+		}
+	}
+
+}

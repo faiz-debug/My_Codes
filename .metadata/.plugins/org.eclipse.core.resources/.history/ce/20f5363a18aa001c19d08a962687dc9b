@@ -1,0 +1,23 @@
+package newest;
+import java.util.Scanner;
+
+public class Fibonacci {
+	  public static int calc_fib(int n, int[] arr) {
+	    if (n <= 1)
+	      return n;
+	    if(arr[n]!=0)
+	    	return arr[n];
+	    int sum= calc_fib(n - 1,arr) + calc_fib(n - 2,arr);
+	    arr[n] = sum;
+	    return sum;
+	  }
+
+	  public static void main(String args[]) {
+	    Scanner in = new Scanner(System.in);
+	    int n = in.nextInt();
+	    int [] arr = new int[n];
+	    System.out.println(calc_fib(n,arr));
+	  }
+	}
+
+

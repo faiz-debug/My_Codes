@@ -1,0 +1,28 @@
+package tests;
+import java.util.*;
+
+public class shams {
+	public static void rec(String que,int ci,String ans,int l)
+	{
+		if(ci==l){
+			System.out.println(ans);
+			return;}
+		if(que.charAt(ci)=='A' && que.charAt(ci+1)=='B' || que.charAt(ci)=='B' && que.charAt(ci+1)=='A')
+		{
+			rec(que,ci+2,ans+(ci-1),l);
+		}
+		if(que.charAt(ci)=='C' && que.charAt(ci+1)=='D' || que.charAt(ci)=='D' && que.charAt(ci+1)=='C') {
+			rec(que,ci+2,ans+(ci-1),l);
+		}
+		rec(que,ci+2,ans,l);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		String que = sc.nextLine();
+		que=que+'X';
+		int ci=0,l=que.length();
+		rec(que,ci,"",l);
+	}
+
+}

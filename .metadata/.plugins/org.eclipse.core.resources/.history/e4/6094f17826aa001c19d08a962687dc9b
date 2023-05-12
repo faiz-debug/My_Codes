@@ -1,0 +1,25 @@
+package newest;
+import java.util.*;
+
+public class myfibo {
+
+	 private static int calc_fib(int n,int[] arr) {
+		    if (n <= 1)
+		      return n;
+		    if(arr[n]!=0)
+		    	return arr[n];
+		    int sum= calc_fib(n - 1,arr) + calc_fib(n - 2,arr);
+		    arr[n] = sum;
+		    return sum;
+		  }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+	    int n = in.nextInt();
+	    int[] arr= new int[n+2];
+	    arr[0] = 0;
+	    arr[1] = 1;
+	    System.out.println(calc_fib(n,arr));
+	}
+
+}

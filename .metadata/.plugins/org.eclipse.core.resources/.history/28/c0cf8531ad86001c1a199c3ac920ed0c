@@ -1,0 +1,21 @@
+import java.util.*;
+public class codechef_practice {
+
+	 public static boolean is_pali(String val,int vdxs, int vdxe){
+         int l = vdxs, r=vdxe;
+         while(l<r){
+               char ch1 = val.charAt(l);
+               char ch2 = val.charAt(r);
+               if(ch1 != ch2)
+               return false;
+               l++;
+               r--;
+         }
+         return true;
+   }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(is_pali("110", 0, 2));
+	}
+
+}

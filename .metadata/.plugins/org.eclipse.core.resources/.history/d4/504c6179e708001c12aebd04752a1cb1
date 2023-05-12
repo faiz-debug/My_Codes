@@ -1,0 +1,26 @@
+package tests;
+import java.util.*;
+
+public class shams {
+static int count =0;
+	public static void path(int que,int c1, int c2, int count)
+	{
+		if((c1+c2)==que)
+		{
+			count=count+1;
+			System.out.println(count);
+			return ;
+		}
+		if((c1+c2)>que)
+			return;
+		
+		path(que,c1+1,c2,count);
+		path(que,c1,c2+2,count);	
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int que= sc.nextInt();
+		int c1=0,c2=0;
+		path(que,c1,c2,count);	
+	}
+}

@@ -1,0 +1,10 @@
+package newest;
+
+public class myfibolast {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

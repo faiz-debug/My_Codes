@@ -1,0 +1,29 @@
+package dynamic;
+import java.util.*;
+
+public class Knapsack {
+	public static int KnapsackRecc(int[] weight,int[] price,int n,int vdx,int cap) {
+		if(vdx==weight.length-1) {
+			return 1;
+		}
+		if(cap==0)
+			return 0;
+		
+		int a=0,b=0;
+		a += KnapsackRecc(weight, price, n, vdx+1,cap-weight[vdx]) + price[vdx];
+		b += KnapsackRecc(weight, price, n, vdx+1,cap-weight[vdx]);
+		return Math.max(a,b);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] weight = {1,3,4,5};
+		int[] price =  {1,4,5,7};
+		int cap = 7;
+		int n = 4,vdx = 0;
+		
+		System.out.println(KnapsackRecc(weight,price,n,vdx,cap));
+
+	}
+
+}
